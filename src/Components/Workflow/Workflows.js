@@ -1,11 +1,11 @@
 import React from 'react';
-import GlobalHeader from './GlobalHeader';
+import WorkflowsListHeader from './WorkflowsListHeader';
 import WorkflowList from './WorklowList';
 
 function Workflows() {
     return (
         <div>
-            <GlobalHeader />
+            <WorkflowsListHeader />
             <WorkflowList />
         </div>
     );

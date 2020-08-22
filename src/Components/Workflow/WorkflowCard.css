@@ -5,6 +5,7 @@
     box-shadow: 0 0 10px 2px #ccc;
     width: calc(25% - 84px);
     position: relative;
+    cursor: pointer;
 }
 
 .workflow-card:hover .delete-icon {

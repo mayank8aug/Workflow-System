@@ -4,7 +4,8 @@ import { Route, Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import Header from './Components/Header/Header';
 import Login from './Components/Auth/Login';
-import Workflows from './Components/Workflow/Workflows'
+import Workflows from './Components/Workflow/Workflows';
+import Workflow from './Components/Workflow/Workflow';
 import './App.css';
 import './Common.css';
 
@@ -16,6 +17,7 @@ function App() {
                 <Switch>
                     <Route exact path="/" component={props => <Login {...props} />} />
                     <Route exact path="/workflows" component={props => <Workflows {...props} />} />
+                    <Route exact path="/workflows/:index" component={props => <Workflow {...props} />} />
                 </Switch>
             </div>
         </BrowserRouter>
