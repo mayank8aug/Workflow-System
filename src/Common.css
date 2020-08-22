@@ -65,3 +65,7 @@
 .text-top {
     vertical-align: text-top;
 }
+
+.outline-none {
+    outline: none;
+}

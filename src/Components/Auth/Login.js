@@ -23,7 +23,7 @@ function Login() {
                             <Field name="email">
                                 {({ input, meta }) => (
                                     <div className="mr-b20">
-                                        <input className="input-field" type="email" {...input} placeholder="Email" />
+                                        <input className="input-field outline-none" type="email" {...input} placeholder="Email" />
                                         {meta.touched && meta.error && <span>{meta.error}</span>}
                                     </div>
                                 )}
@@ -31,7 +31,7 @@ function Login() {
                             <Field name="password">
                                 {({ input, meta }) => (
                                     <div className="mr-b20">
-                                        <input className="input-field" type="password" {...input} placeholder="Password" />
+                                        <input className="input-field outline-none" type="password" {...input} placeholder="Password" />
                                         {meta.touched && meta.error && <span>{meta.error}</span>}
                                     </div>
                                 )}
@@ -47,7 +47,7 @@ function Login() {
                                 </Field>
                                 <span className="pd-l4 fs14 text-top">Remember me</span>
                             </label>
-                            <button className="w100 color-white cursor-pointer submit-btn" type="submit">Login</button>
+                            <button className="w100 color-white cursor-pointer submit-btn outline-none" type="submit">Login</button>
                         </form>
                     )}
                 />
