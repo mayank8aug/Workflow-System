@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Form, Field } from 'react-final-form';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../../actions/index';
 import './Login.css';
 
-function onSubmit() {
-
+function onSubmit(history, dispatch) {
+    dispatch(loginUser('mk@yopmail.com'));
+    history.replace('/workflows');
 }
 
 function validate() {
 
 }
 
-function Login() {
+function Login(props) {
+    const { history } = props;
+    const dispatch = useDispatch();
+    const submitHandler = useCallback(onSubmit.bind(null, history, dispatch), []);
     return (
         <div className="login-container display-flex flex-column justify-space-center align-items-center">
             <div className="login">
                 <div className="mr-b20 fw700 text-center">Login</div>
                 <Form
-                    onSubmit={onSubmit}
+                    onSubmit={submitHandler}
                     validate={validate}
                     render={({ handleSubmit }) => (
                         <form onSubmit={handleSubmit}>

@@ -1,4 +1,17 @@
 .header {
     padding: 16px 24px;
     background-color: #c842f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 32px;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
 }
