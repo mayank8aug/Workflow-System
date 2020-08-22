@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/workflow-system/static/css/main.44e2d3b3.chunk.css",
-    "main.js": "/workflow-system/static/js/main.b6198d6b.chunk.js",
-    "main.js.map": "/workflow-system/static/js/main.b6198d6b.chunk.js.map",
-    "runtime-main.js": "/workflow-system/static/js/runtime-main.66cbfda1.js",
-    "runtime-main.js.map": "/workflow-system/static/js/runtime-main.66cbfda1.js.map",
-    "static/js/2.e9721cb3.chunk.js": "/workflow-system/static/js/2.e9721cb3.chunk.js",
-    "static/js/2.e9721cb3.chunk.js.map": "/workflow-system/static/js/2.e9721cb3.chunk.js.map",
-    "index.html": "/workflow-system/index.html",
-    "precache-manifest.5f4ac466d77e6975fd8c8d7239571443.js": "/workflow-system/precache-manifest.5f4ac466d77e6975fd8c8d7239571443.js",
-    "service-worker.js": "/workflow-system/service-worker.js",
-    "static/css/main.44e2d3b3.chunk.css.map": "/workflow-system/static/css/main.44e2d3b3.chunk.css.map",
-    "static/js/2.e9721cb3.chunk.js.LICENSE.txt": "/workflow-system/static/js/2.e9721cb3.chunk.js.LICENSE.txt"
+    "main.css": "/Workflow-System/static/css/main.44e2d3b3.chunk.css",
+    "main.js": "/Workflow-System/static/js/main.b6198d6b.chunk.js",
+    "main.js.map": "/Workflow-System/static/js/main.b6198d6b.chunk.js.map",
+    "runtime-main.js": "/Workflow-System/static/js/runtime-main.306a8790.js",
+    "runtime-main.js.map": "/Workflow-System/static/js/runtime-main.306a8790.js.map",
+    "static/js/2.e9721cb3.chunk.js": "/Workflow-System/static/js/2.e9721cb3.chunk.js",
+    "static/js/2.e9721cb3.chunk.js.map": "/Workflow-System/static/js/2.e9721cb3.chunk.js.map",
+    "index.html": "/Workflow-System/index.html",
+    "precache-manifest.1318e446ecdeacf52f30561a82b950b0.js": "/Workflow-System/precache-manifest.1318e446ecdeacf52f30561a82b950b0.js",
+    "service-worker.js": "/Workflow-System/service-worker.js",
+    "static/css/main.44e2d3b3.chunk.css.map": "/Workflow-System/static/css/main.44e2d3b3.chunk.css.map",
+    "static/js/2.e9721cb3.chunk.js.LICENSE.txt": "/Workflow-System/static/js/2.e9721cb3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.66cbfda1.js",
+    "static/js/runtime-main.306a8790.js",
     "static/js/2.e9721cb3.chunk.js",
     "static/css/main.44e2d3b3.chunk.css",
     "static/js/main.b6198d6b.chunk.js"
