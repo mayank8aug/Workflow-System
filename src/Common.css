@@ -1,0 +1,67 @@
+.color-white {
+    color: #fff;
+}
+
+.fs20 {
+    font-size: 20px;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.pos-fix {
+    position: fixed;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.justify-space-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.mr-b20 {
+    margin-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.pd-l4 {
+    padding-left: 4px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.text-top {
+    vertical-align: text-top;
+}

@@ -1,11 +1,15 @@
   
 import React from 'react';
+import Header from './Components/Header/Header';
+import Login from './Components/Auth/Login';
+import './App.css';
 import './Common.css';
 
-const App = () => {
+function App() {
   return (
     <div className="app-container">
-      Hello
+        <Header/>
+        <Login />
     </div>
   )
 }

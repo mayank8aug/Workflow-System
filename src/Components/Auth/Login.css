@@ -1,0 +1,30 @@
+.login-container {
+    min-height: calc(100vh - 55px);
+}
+
+.login {
+    padding: 30px 20px;
+    box-shadow: 0 0 5px 2px #ccc;
+    width: 20%;
+}
+
+.input-field {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #3f5df2;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.signup-text {
+    color: #3fbcf2;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
