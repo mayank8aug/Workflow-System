@@ -1,0 +1,44 @@
+.workflow-card {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px 2px #ccc;
+    width: calc(25% - 84px);
+    position: relative;
+}
+
+.workflow-card:hover .delete-icon {
+    display: block;
+}
+
+.workflow-name {
+    border: 2px solid #ccc;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.delete-icon {
+    cursor: pointer;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    background: #fc4503;
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+    display: none;
+}
+
+.state-icon {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.pending {
+    color: #e8e6e6;
+}
+
+.completed {
+    color: #0b8507;
+}
