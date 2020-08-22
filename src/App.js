@@ -10,7 +10,7 @@ import './Common.css';
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className="app-container">
                 <Header />
                 <Switch>
