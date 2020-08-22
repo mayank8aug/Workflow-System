@@ -13,6 +13,12 @@ function workflow(prevState = initialState, action) {
             return Object.assign({}, prevState, {
                 workflows: [...prevState.workflows]
             });
+        case 'ADD_NODE':
+            const prevWorkflows = JSON.parse(JSON.stringify(prevState.workflows));
+            prevWorkflows[action.index].nodes.push(action.node);
+            return Object.assign({}, prevState, {
+                workflows: prevWorkflows
+            });
         default:
             return prevState;
     }

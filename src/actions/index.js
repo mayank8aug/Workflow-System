@@ -4,7 +4,9 @@ export const types = {
     SET_SEARCH_QUERY: 'SET_SEARCH_QUERY',
     SET_FILTER: 'SET_FILTER',
     ADD_WORKFLOW: 'ADD_WORKFLOW',
-    DELETE_WORKFLOW: 'DELETE_WORKFLOW'
+    DELETE_WORKFLOW: 'DELETE_WORKFLOW',
+    ADD_NODE: 'ADD_NODE',
+    DELETE_NODE: 'DELETE_NODE'
 };
 
 export function loginUser(email) {
@@ -24,9 +26,17 @@ export function setFilter(filterState) {
 }
 
 export function addWorkflow() {
-    return { type: types.ADD_WORKFLOW, workflow: { name: 'New Workflow', state: 'PENDING' } };
+    return { type: types.ADD_WORKFLOW, workflow: { name: 'New Workflow', state: 'PENDING', nodes: [] } };
 }
 
 export function deleteWorkflow(index) {
     return { type: types.DELETE_WORKFLOW, index };
+}
+
+export function addNode(index) {
+    return { type: types.ADD_NODE, index, node: { title: 'New Task', content: 'Task Content', state: 'PENDING'} };
+}
+
+export function deleteNode(index) {
+    return { type: types.DELETE_NODE, index };
 }
