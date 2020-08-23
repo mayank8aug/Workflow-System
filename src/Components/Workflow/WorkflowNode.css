@@ -1,0 +1,31 @@
+.workflow-node {
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px 2px #ccc;
+    width: calc(25% - 84px);
+    position: relative;
+}
+
+.node-state-icon {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    font-size: 40px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.title {
+    border: 2px solid #999;
+    padding: 10px;
+    box-shadow: 0px 2px #ccc;
+    margin-bottom: 20px;
+}
+
+.content {
+    border: 2px solid #999;
+    padding: 10px;
+    box-shadow: 0px 2px #ccc;
+    height: 50vh;
+}

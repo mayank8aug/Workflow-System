@@ -1,0 +1,49 @@
+.workflow-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 2px #ccc;
+    margin-bottom: 20px;
+}
+
+.workflow-name-text {
+    box-shadow: 0px 2px #ccc;
+    padding: 10px;
+    width: 30vw;
+    border: 2px solid #999;
+    outline: none;
+}
+
+.workflow-actions {
+    width: 35vw;
+    justify-content: flex-end;
+}
+
+.workflow-actions button {
+    margin-left: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #fff;
+    flex-basis: 20%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.workflow-actions .add-node {
+    background: #6fb56b;
+}
+
+.workflow-actions .delete-node {
+    background: #ed2e11; 
+}
+
+.workflow-actions .shuffle {
+    background: #ba0da0;
+}
+
+.workflow-actions .save {
+    background: #056bf0;
+}

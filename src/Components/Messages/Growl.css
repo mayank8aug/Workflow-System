@@ -1,0 +1,30 @@
+.growl {
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    line-height: 20px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.growl-error {
+    color: #F00;
+    background: #F38DAA;
+}
+
+.growl-info {
+    color: #065CE8;
+    background: #B3CDF6;
+}
+
+.growl-success {
+    color: #227117;
+    background: #B5F6AC;
+}
+
+.growl-warning {
+    color: #F89506;
+    background: #F6DBB3;
+}

@@ -35,11 +35,3 @@
     font-size: 32px;
     cursor: pointer;
 }
-
-.pending {
-    color: #e8e6e6;
-}
-
-.completed {
-    color: #0b8507;
-}

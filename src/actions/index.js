@@ -6,7 +6,10 @@ export const types = {
     ADD_WORKFLOW: 'ADD_WORKFLOW',
     DELETE_WORKFLOW: 'DELETE_WORKFLOW',
     ADD_NODE: 'ADD_NODE',
-    DELETE_NODE: 'DELETE_NODE'
+    DELETE_NODE: 'DELETE_NODE',
+    UPDATE_NODE_STATE: 'UPDATE_NODE_STATE',
+    UPDATE_GROWL: 'UPDATE_GROWL',
+    CLEAR_WORKFLOW_ERROR: 'CLEAR_WORKFLOW_ERROR'
 };
 
 export function loginUser(email) {
@@ -39,4 +42,16 @@ export function addNode(index) {
 
 export function deleteNode(index) {
     return { type: types.DELETE_NODE, index };
+}
+
+export function updateState(workflowIndex, nodeIndex) {
+    return { type: types.UPDATE_NODE_STATE, workflowIndex, nodeIndex };
+}
+
+export function growlUpdate(data) {
+    return { type: types.UPDATE_GROWL, data };
+}
+
+export function clearWorkflowError() {
+    return { type: types.CLEAR_WORKFLOW_ERROR };
 }

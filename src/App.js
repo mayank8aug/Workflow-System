@@ -8,6 +8,7 @@ import Workflows from './Components/Workflow/Workflows';
 import Workflow from './Components/Workflow/Workflow';
 import './App.css';
 import './Common.css';
+import Growl from './Components/Messages/Growl';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route exact path="/workflows" component={props => <Workflows {...props} />} />
                     <Route exact path="/workflows/:index" component={props => <Workflow {...props} />} />
                 </Switch>
+                <Growl />
             </div>
         </BrowserRouter>
     )

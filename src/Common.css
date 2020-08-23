@@ -72,3 +72,15 @@
 .outline-none {
     outline: none;
 }
+
+.pending {
+    color: #e8e6e6;
+}
+
+.in-progress {
+    color: #6284d1;
+}
+
+.completed {
+    color: #0b8507;
+}
