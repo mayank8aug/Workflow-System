@@ -11,7 +11,10 @@ export const types = {
     UPDATE_GROWL: 'UPDATE_GROWL',
     CLEAR_WORKFLOW_ERROR: 'CLEAR_WORKFLOW_ERROR',
     UPDATE_WORKFLOW_STATE: 'UPDATE_WORKFLOW_STATE',
-    UPDATE_WORKFLOWS: 'UPDATE_WORKFLOWS'
+    UPDATE_WORKFLOWS: 'UPDATE_WORKFLOWS',
+    UPDATE_WORKFLOW: 'UPDATE_WORKFLOW',
+    UPDATE_NODE: 'UPDATE_NODE'
+
 };
 
 export function loginUser(email) {
@@ -64,4 +67,12 @@ export function updateWorkflowState(index) {
 
 export function updateWorkflows(updateType) {
     return { type: types.UPDATE_WORKFLOWS, updateType };
+}
+
+export function updateWorkflow(index, data) {
+    return { type: types.UPDATE_WORKFLOW, index, data };
+}
+
+export function updateNode(workflowIndex, nodeIndex, data) {
+    return { type: types.UPDATE_NODE, workflowIndex, nodeIndex, data };
 }

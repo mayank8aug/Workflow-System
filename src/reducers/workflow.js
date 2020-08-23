@@ -92,6 +92,18 @@ function workflow(prevState = initialState, action) {
                 workflowAdded: false,
                 saved: false
             });
+        case 'UPDATE_WORKFLOW':
+            const wf = prevState.workflows[action.index];
+            Object.assign(wf, action.data);
+            return Object.assign({}, prevState, {
+                workflows: prevState.workflows
+            });
+        case 'UPDATE_NODE':
+            const currentNode = prevState.workflows[action.workflowIndex].nodes[action.nodeIndex];
+            Object.assign(currentNode, action.data);
+            return Object.assign({}, prevState, {
+                workflows: prevState.workflows
+            });   
         default:
             return prevState;
     }
