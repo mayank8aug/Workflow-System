@@ -7,8 +7,6 @@ Run below commands to get started.
 2. npm run start
 
 
-
-
 Instructions & Limitations:
 
 1. Clicking on any workflow will redirect the user to workflow edit page.
