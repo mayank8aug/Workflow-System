@@ -4,7 +4,8 @@ const initialState = {
     nodeRemoved: false,
     workflowRemoved: false,
     persistedWorkflows: [],
-    searchQuery: null
+    searchQuery: '',
+    filterState: ''
 };
 
 function workflow(prevState = initialState, action) {
@@ -118,6 +119,10 @@ function workflow(prevState = initialState, action) {
         case 'SET_SEARCH_QUERY':
             return Object.assign({}, prevState, {
                 searchQuery: action.query.trim().toLowerCase()
+            });
+        case 'SET_FILTER':
+            return Object.assign({}, prevState, {
+                filterState: action.filterState
             });
         default:
             return prevState;
