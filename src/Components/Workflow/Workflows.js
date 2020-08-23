@@ -15,11 +15,15 @@ function updateGrowl(dispatch, type) {
 }
 
 function Workflows() {
+    const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+    const history = useHistory();
+    if (!isLoggedIn) {
+        history.push('/');
+    }
     const dispatch = useDispatch();
     const updateGrowlFn = useCallback(updateGrowl.bind(null, dispatch), []);
     const workflowState = useSelector(state => state.workflow);
     const { persistedWorkflows, updateStateErr, workflowRemoved, workflowAdded, searchQuery, filterState } = workflowState;
-    const history = useHistory();
     useEffect(() => {
         if (updateStateErr) {
             updateGrowlFn('update-error');
