@@ -18,7 +18,7 @@ function Workflows() {
     const dispatch = useDispatch();
     const updateGrowlFn = useCallback(updateGrowl.bind(null, dispatch), []);
     const workflowState = useSelector(state => state.workflow);
-    const { persistedWorkflows, updateStateErr, workflowRemoved, workflowAdded } = workflowState;
+    const { persistedWorkflows, updateStateErr, workflowRemoved, workflowAdded, searchQuery } = workflowState;
     const history = useHistory();
     useEffect(() => {
         if (updateStateErr) {
@@ -30,10 +30,11 @@ function Workflows() {
             dispatch(clearWorkflowError());
         }
     }, [workflowAdded, workflowRemoved, updateStateErr, updateGrowlFn, history, persistedWorkflows, dispatch]);
+    const renderWorkflows = searchQuery ? persistedWorkflows.filter(workflow => workflow.name.toLowerCase().indexOf(searchQuery) > -1) : persistedWorkflows;
     return (
         <div>
             <WorkflowsListHeader />
-            <WorkflowList workflows={persistedWorkflows} />
+            <WorkflowList workflows={renderWorkflows} />
         </div>
     );
 }
