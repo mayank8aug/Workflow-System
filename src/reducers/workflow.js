@@ -2,26 +2,27 @@ const initialState = {
     workflows: [],
     updateStateErr: false,
     nodeRemoved: false,
-    workflowRemoved: false
+    workflowRemoved: false,
+    persistedWorkflows: []
 };
 
 function workflow(prevState = initialState, action) {
     switch(action.type) {
         case 'ADD_WORKFLOW':
             return Object.assign({}, prevState, {
-                workflows: prevState.workflows.concat(action.workflow),
+                persistedWorkflows: prevState.persistedWorkflows.concat(action.workflow),
                 updateStateErr: false,
                 workflowAdded: true
             });
         case 'DELETE_WORKFLOW':
-            prevState.workflows.splice(action.index, 1);
+            prevState.persistedWorkflows.splice(action.index, 1);
             return Object.assign({}, prevState, {
-                workflows: [...prevState.workflows],
+                workflows: [...prevState.persistedWorkflows],
                 updateStateErr: false,
                 workflowRemoved: true
             });
         case 'UPDATE_WORKFLOW_STATE':
-            const workflows = JSON.parse(JSON.stringify(prevState.workflows));
+            const workflows = JSON.parse(JSON.stringify(prevState.persistedWorkflows));
             const workflow = workflows[action.index];
             const canNotBeUpdated = workflow.nodes.some(node => node.state !== 'COMPLETED');
             if (canNotBeUpdated) {
@@ -31,7 +32,20 @@ function workflow(prevState = initialState, action) {
             } else {
                 workflow.state = workflow.state === 'PENDING' ? 'COMPLETED' : 'PENDING';
                 return Object.assign({}, prevState, {
-                    workflows
+                    persistedWorkflows: workflows
+                });
+            }
+        case 'UPDATE_WORKFLOWS':
+            const persisted = JSON.parse(JSON.stringify(prevState.persistedWorkflows));
+            if (action.updateType === 'fromPersist') {
+                return Object.assign({}, prevState, {
+                    workflows: persisted,
+                    saved: false
+                });
+            } else {
+                return Object.assign({}, prevState, {
+                    persistedWorkflows: prevState.workflows,
+                    saved: true
                 });
             }
         case 'ADD_NODE':
@@ -75,7 +89,8 @@ function workflow(prevState = initialState, action) {
                 updateStateErr: false,
                 nodeRemoved: false,
                 workflowRemoved: false,
-                workflowAdded: false
+                workflowAdded: false,
+                saved: false
             });
         default:
             return prevState;

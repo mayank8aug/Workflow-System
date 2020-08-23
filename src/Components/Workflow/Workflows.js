@@ -18,7 +18,7 @@ function Workflows() {
     const dispatch = useDispatch();
     const updateGrowlFn = useCallback(updateGrowl.bind(null, dispatch), []);
     const workflowState = useSelector(state => state.workflow);
-    const { workflows, updateStateErr, workflowRemoved, workflowAdded } = workflowState;
+    const { persistedWorkflows, updateStateErr, workflowRemoved, workflowAdded } = workflowState;
     const history = useHistory();
     useEffect(() => {
         if (updateStateErr) {
@@ -26,14 +26,14 @@ function Workflows() {
         } else if (workflowRemoved) {
             updateGrowlFn('delete-success');
         } else if (workflowAdded) {
-            // history.push(`/workflows/${workflows.length - 1}`);
+            // history.push(`/workflows/${persistedWorkflows.length - 1}`);
             dispatch(clearWorkflowError());
         }
-    }, [workflowAdded, workflowRemoved, updateStateErr, updateGrowlFn, history, workflows, dispatch]);
+    }, [workflowAdded, workflowRemoved, updateStateErr, updateGrowlFn, history, persistedWorkflows, dispatch]);
     return (
         <div>
             <WorkflowsListHeader />
-            <WorkflowList />
+            <WorkflowList workflows={persistedWorkflows} />
         </div>
     );
 }
