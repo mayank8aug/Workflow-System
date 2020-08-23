@@ -33,7 +33,7 @@
 }
 
 .workflow-actions .add-node {
-    background: #6fb56b;
+    background: #0b8507;
 }
 
 .workflow-actions .delete-node {
@@ -46,4 +46,5 @@
 
 .workflow-actions .save {
     background: #056bf0;
+    /* cursor: not-allowed; */
 }

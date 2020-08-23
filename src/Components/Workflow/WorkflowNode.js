@@ -16,8 +16,8 @@ function WorkflowNode(props) {
     return (
         <div className="workflow-node">
             <div className={`node-state-icon ${state.toLowerCase()}${state !== 'COMPLETED' ? ' cursor-pointer' : ''}`} onClick={state !== 'COMPLETED' ? changeStateFn : noop}><FaCheckCircle /></div>
-            <div className="title">{title}</div>
-            <div className="content">{content}</div>
+            <div className="title" contentEditable>{title}</div>
+            <div className="content" contentEditable>{content}</div>
         </div>
     ); 
 }

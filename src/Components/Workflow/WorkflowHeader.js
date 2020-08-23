@@ -3,12 +3,12 @@ import WorkflowActions from './WorkflowActions';
 import './WorkflowHeader.css';
 
 function WorkflowHeader(props) {
-    const { index, workflow: { name, nodes } } = props;
-    const hideShuffle = !nodes.length || nodes.some(node => node.state !== 'COMPLETED');
+    const { index, workflow: { name, nodes, state } } = props;
+    const allowShuffle = state === 'COMPLETED';
     return (
         <div className="workflow-header">
             <input class="workflow-name-text" type="text" defaultValue={name} />
-            <WorkflowActions index={index} nodesCount={nodes.length} hideShuffle={hideShuffle} />
+            <WorkflowActions index={index} nodesCount={nodes.length} allowShuffle={allowShuffle} />
         </div>
     );
 }

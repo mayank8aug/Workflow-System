@@ -17,6 +17,7 @@
     padding: 10px 10px;
     border-radius: 5px;
     margin-bottom: 30px;
+    box-shadow: 0px 1px #ccc;
 }
 
 .delete-icon {

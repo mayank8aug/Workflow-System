@@ -30,7 +30,7 @@ function WorkflowCard(props) {
                 <FaTrashAlt />
             </div>
             <div className="workflow-name">{name}</div> 
-            <div className="display-flex justify-space-between align-item-center">
+            <div className="display-flex justify-space-between align-items-center">
                 {state}
                 <span className={`state-icon ${state.toLowerCase()}`} onClick={updateWorkflowStateFn}><FaCheckCircle /></span>
             </div>    

@@ -10,8 +10,8 @@ function workflow(prevState = initialState, action) {
         case 'ADD_WORKFLOW':
             return Object.assign({}, prevState, {
                 workflows: prevState.workflows.concat(action.workflow),
-                updateStateErr: false
-
+                updateStateErr: false,
+                workflowAdded: true
             });
         case 'DELETE_WORKFLOW':
             prevState.workflows.splice(action.index, 1);
@@ -74,7 +74,8 @@ function workflow(prevState = initialState, action) {
             return Object.assign({}, prevState,  {
                 updateStateErr: false,
                 nodeRemoved: false,
-                workflowRemoved: false
+                workflowRemoved: false,
+                workflowAdded: false
             });
         default:
             return prevState;
