@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { Form, Field } from 'react-final-form';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../actions/index';
+import { email, required } from '../../utils';
 import './Login.css';
 
 function onSubmit(history, dispatch) {
@@ -26,19 +27,19 @@ function Login(props) {
                     validate={validate}
                     render={({ handleSubmit }) => (
                         <form onSubmit={handleSubmit}>
-                            <Field name="email">
+                            <Field name="email" validate={email}>
                                 {({ input, meta }) => (
-                                    <div className="mr-b20">
-                                        <input className="input-field outline-none" type="email" {...input} placeholder="Email" />
-                                        {meta.touched && meta.error && <span>{meta.error}</span>}
+                                    <div className="mr-b40 pos-rel">
+                                        <input className="input-field outline-none" type="email" {...input} placeholder="*Email" />
+                                        {meta.touched && meta.error && <span className="val-error pos-abs">{meta.error}</span>}
                                     </div>
                                 )}
                             </Field>
-                            <Field name="password">
+                            <Field name="password" validate={required}>
                                 {({ input, meta }) => (
-                                    <div className="mr-b20">
-                                        <input className="input-field outline-none" type="password" {...input} placeholder="Password" />
-                                        {meta.touched && meta.error && <span>{meta.error}</span>}
+                                    <div className="mr-b40 pos-rel">
+                                        <input className="input-field outline-none" type="password" {...input} placeholder="*Password" />
+                                        {meta.touched && meta.error && <span className="val-error pos-abs">{meta.error}</span>}
                                     </div>
                                 )}
                             </Field>
