@@ -103,7 +103,17 @@ function workflow(prevState = initialState, action) {
             Object.assign(currentNode, action.data);
             return Object.assign({}, prevState, {
                 workflows: prevState.workflows
-            });   
+            });
+        case 'SHUFFLE_NODES':
+            const wfToShuffle = prevState.workflows[action.index];
+            const wfNodes = wfToShuffle.nodes;
+            for (let i = wfNodes.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [wfNodes[i], wfNodes[j]] = [wfNodes[j], wfNodes[i]];
+            }
+            return Object.assign({}, prevState, {
+                workflows: prevState.workflows
+            });
         default:
             return prevState;
     }

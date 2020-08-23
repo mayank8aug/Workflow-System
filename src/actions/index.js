@@ -13,8 +13,8 @@ export const types = {
     UPDATE_WORKFLOW_STATE: 'UPDATE_WORKFLOW_STATE',
     UPDATE_WORKFLOWS: 'UPDATE_WORKFLOWS',
     UPDATE_WORKFLOW: 'UPDATE_WORKFLOW',
-    UPDATE_NODE: 'UPDATE_NODE'
-
+    UPDATE_NODE: 'UPDATE_NODE',
+    SHUFFLE_NODES: 'SHUFFLE_NODES'
 };
 
 export function loginUser(email) {
@@ -75,4 +75,8 @@ export function updateWorkflow(index, data) {
 
 export function updateNode(workflowIndex, nodeIndex, data) {
     return { type: types.UPDATE_NODE, workflowIndex, nodeIndex, data };
+}
+
+export function shuffleNodes(index) {
+    return { type: types.SHUFFLE_NODES, index };
 }
