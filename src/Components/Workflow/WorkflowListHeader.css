@@ -21,8 +21,15 @@
 
 .list-header .search {
     box-shadow: 0px 2px #ccc;
-    padding: 10px;
+    padding: 10px 30px;
     width: 20vw;
     border: 2px solid #999;
     outline: none;
+}
+
+.workflow-search svg {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #999;
 }

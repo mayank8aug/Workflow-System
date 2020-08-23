@@ -19,15 +19,15 @@ function Workflow(props) {
     const dispatch = useDispatch();
     const updateGrowlFn = useCallback(updateGrowl.bind(null, dispatch), []);
     const workflowState = useSelector(state => state.workflow);
-    const { workflows, nodeStateErr, nodeRemoved } = workflowState;
+    const { workflows, updateStateErr, nodeRemoved } = workflowState;
     const workflow = workflows[workflowIndex];
     useEffect(() => {
-        if (nodeStateErr) {
+        if (updateStateErr) {
             updateGrowlFn('update-error');
         } else if (nodeRemoved) {
             updateGrowlFn('delete-success');
         }
-    }, [nodeRemoved, nodeStateErr, updateGrowlFn]);
+    }, [nodeRemoved, updateStateErr, updateGrowlFn]);
     return (
         <div className="workflow">
             <WorkflowHeader workflow={workflow} index={workflowIndex} />

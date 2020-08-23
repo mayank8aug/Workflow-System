@@ -7,6 +7,17 @@
     position: relative;
 }
 
+.workflow-node:not(:first-child):before {
+    content: '\2192';
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    z-index: 1;
+    font-size: 40px;
+}
+
 .node-state-icon {
     position: absolute;
     top: -16px;

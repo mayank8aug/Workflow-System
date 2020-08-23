@@ -84,3 +84,7 @@
 .completed {
     color: #0b8507;
 }
+
+.pos-rel {
+    position: relative;
+}

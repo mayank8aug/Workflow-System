@@ -12,13 +12,13 @@ function deleteLastNode(dispatch, index) {
 }
 
 function WorkflowActions(props) {
-    const { index, nodesCount } = props;
+    const { index, nodesCount, hideShuffle } = props;
     const dispatch = useDispatch();
     const addNodeFn = useCallback(addNewNode.bind(null, dispatch, index), []);
     const deleteNodeFn = useCallback(deleteLastNode.bind(null, dispatch, index), []);
     return (
         <div className="workflow-actions display-flex align-items-center">
-            <button className="shuffle display-flex align-items-center" onClick={() => {}}><FaRandom /><span className="pd-l4">Shuffle</span></button>
+            {!hideShuffle && <button className="shuffle display-flex align-items-center" onClick={() => {}}><FaRandom /><span className="pd-l4">Shuffle</span></button>}
             <button className="add-node display-flex align-items-center" onClick={addNodeFn}><FaPlus /><span className="pd-l4">Add Node</span></button>
             {nodesCount > 0 && <button className="delete-node display-flex align-items-center" onClick={deleteNodeFn}><FaTimes /><span className="pd-l4">Delete</span></button>}
             <button className="save display-flex align-items-center" onClick={() => {}}><span className="pd-l4">Save</span></button>
