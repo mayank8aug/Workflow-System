@@ -15,3 +15,9 @@
     cursor: pointer;
     outline: none;
 }
+
+.back-btn {
+    font-size: 32px;
+    cursor: pointer;
+    margin-right: 20px;
+}
